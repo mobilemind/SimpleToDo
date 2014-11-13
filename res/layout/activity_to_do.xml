@@ -11,9 +11,8 @@
         android:layout_above="@+id/etNewItem"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true" >
-
-    </ListView>
+        android:layout_alignParentTop="true"
+	/>
     
     <EditText
         android:id="@+id/etNewItem"
@@ -24,8 +23,9 @@
         android:layout_alignTop="@+id/btnAdd"
         android:layout_toLeftOf="@+id/btnAdd"
         android:ems="10"
-        android:hint="@string/enter_input_text" 
-        />
+        android:hint="@string/enter_input_text"
+        android:imeOptions="actionDone" 
+	/>
 
     <Button
         android:id="@+id/btnAdd"
@@ -34,6 +34,7 @@
         android:onClick="onAddedItem"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:text="@string/add_button_label" />
+        android:text="@string/add_button_label"
+	/>
 
 </RelativeLayout>

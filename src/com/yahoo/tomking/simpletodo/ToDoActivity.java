@@ -32,8 +32,7 @@ public class ToDoActivity extends Activity {
         etNewItem = (EditText) findViewById(R.id.etNewItem);
         lvItems = (ListView) findViewById(R.id.lvItems);
         readItems();
-        todoAdapter= new ArrayAdapter<String>(this,
-        		android.R.layout.simple_list_item_1, todoItems);
+        todoAdapter= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, todoItems);
         lvItems.setAdapter(todoAdapter);
         setupListViewListner();
         setupEditTextViewListener();
@@ -42,8 +41,7 @@ public class ToDoActivity extends Activity {
 	private void setupListViewListner() {
 		lvItems.setOnItemLongClickListener(new OnItemLongClickListener() {
 			@Override
-			public boolean onItemLongClick(AdapterView<?> adapter, View items,
-					int pos, long id) {
+			public boolean onItemLongClick(AdapterView<?> adapter, View items, int pos, long id) {
 				todoItems.remove(pos);
 				todoAdapter.notifyDataSetChanged();
 				writeItems();
@@ -58,10 +56,8 @@ public class ToDoActivity extends Activity {
 			public boolean onKey(View v, int keyCode, KeyEvent event) {
 				if (event.getKeyCode() == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_UP) {
 					String itemText = etNewItem.getText().toString();
-					if ("" != itemText.replaceAll("[\n\r]","")) {
-						// strip new line before appending item added by pressing Enter
-						etNewItem.setText(itemText.toCharArray(), 0, itemText.length()- 1);
-					}
+					// strip new line before appending item added by pressing Enter
+					if ("" != itemText) etNewItem.setText(itemText.toCharArray(), 0, itemText.length()- 1);
 					onAddedItem(v);
 					return true;
 				}

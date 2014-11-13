@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">SimpleToDo</string>
-    <string name="hello_world">Hello world!</string>
     <string name="add_button_label">Add</string>
     <string name="enter_input_text">Enter a To Do item</string>
     
