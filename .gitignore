@@ -41,8 +41,8 @@ Thumbs.db
 .idea/
 
 # Misc temp, bkup, log etc.
-.bkup
-.orig
-.tmp
-.log
+*.bkup
+*.orig
+*.tmp
+*.log
 import-summary.txt
